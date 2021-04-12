@@ -8,6 +8,7 @@
 <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
 <link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {font-family: "Lato", sans-serif}
@@ -274,7 +275,7 @@ Currently I am a penultimate year Computer Science Engineering student at M.S Ra
             </div>
           </div>
           <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+          <button class="w3-button w3-black w3-section w3-right" onclick="document.getElementById('comingsoon').style.display='block'">SEND</button>
         </form>
       </div>
     </div>
@@ -282,6 +283,17 @@ Currently I am a penultimate year Computer Science Engineering student at M.S Ra
   
 <!-- End Page Content -->
 </div>
+	
+<!---COMING SOON MODAL-->
+
+<div id="comingsoon" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container w3-black w3-animate-opacity w3-border-yellow">
+        <span onclick="document.getElementById('comingsoon').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <H1 class="w3-center w3-animate-opacity w3-white" style="font-family:Sofia">Feature Coming Soon</H1>
+      </div>
+    </div>
+</div> 
 
 <!-- Image of location/map -->
 <img src="/Images/Ramaiah map.png" class="w3-image w3-greyscale-min" style="width:100%">
@@ -298,22 +310,6 @@ Currently I am a penultimate year Computer Science Engineering student at M.S Ra
 </footer>
 
 <script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
   var x = document.getElementById("navDemo");
