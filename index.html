@@ -20,10 +20,10 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
  	<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-	<a href="#" class="w3-bar-item w3-button w3-padding-large" onclick= "SiteView()">HOME</a>
-	<a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "SiteView()">PROJECTS</a>  
+	<a href="#" class="w3-bar-item w3-button w3-padding-large" onclick= "SiteView('home')">HOME</a>
+	<a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "SiteView('projects')">PROJECTS</a>  
 	<a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "View()">RESUME</a>
-	<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "SiteView()">CONTACT</a>
+	<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "SiteView('contact')">CONTACT</a>
  
 	<!-- Search icon -->
 	<a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
@@ -64,7 +64,7 @@ html,body{
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- Cover Image -->
-  <div class="w3-display-container w3-center">
+  <div class="w3-display-container w3-center" id='home'>
     <img src="Images/Cover2.jpg" style="width:100%; height:700px;" >
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-34 w3-hide-small">
       <h1>Archit Bubber</h1>
@@ -99,7 +99,7 @@ Currently I am in my penultimate year studying Computer Science Engineering at M
 
   <!-- The Project Section -->
   <div class="w3-black" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+    <div class="w3-container w3-content w3-padding-64" style="display:none;max-width:800px">
       <h2 class="w3-wide w3-center">Current Projects</h2>
       <p class="w3-opacity w3-center"><i>Contributions Appreciated &#11088</i></p><br>
 
@@ -200,7 +200,7 @@ Currently I am in my penultimate year studying Computer Science Engineering at M
   </div>
 
   <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+  <div class="w3-container w3-content w3-padding-64" style="display:none;max-width:800px" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
     <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
     <div class="w3-row w3-padding-32">
@@ -233,7 +233,7 @@ Currently I am in my penultimate year studying Computer Science Engineering at M
 
 <div id="comingsoon" class="w3-modal">
     <div class="w3-modal-content">
-      <div class="w3-container w3-black w3-animate-opacity w3-border-yellow">
+      <div class="w3-container w3-black w3-animate-opacity w3-border-yellow" style="animation-iteration-count:infinite;animation-direction:alternate;" >
         <span onclick="document.getElementById('comingsoon').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         <H1 class="w3-center w3-animate-opacity w3-white" style="font-family:Sofia">Feature Coming Soon</H1>
       </div>
@@ -256,12 +256,23 @@ Currently I am in my penultimate year studying Computer Science Engineering at M
 </footer>
 
 <script>
+	function show(panel_name){
+            var names=['home','projects','contact'];
+            for(var i=0;i<3;i++){
+                if(names[i]==panel_name){
+                    document.getElementById(panel_name).style.display='block';
+                    continue;
+                }
+                document.getElementById(names[i]).style.display='none';
+            }
+        }
 // PDF VIEW Script
-	function SiteView() {
+	function SiteView(panel_name) {
   var x = document.getElementById("pdf");
 	x.style.display ="none";
 	document.getElementById("html").style.overflow = "visible";
 	document.getElementById("body").style.overflow = "visible";
+	show(panel_name);
 	}
 
 	function View() {
