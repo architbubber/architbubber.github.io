@@ -21,7 +21,7 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
  	<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 	<a href="#" class="w3-bar-item w3-button w3-padding-large" onclick= "SiteView('home')">HOME</a>
-	<a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "SiteView('projects')">PROJECTS</a>  
+	<a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "SiteView('tour')">PROJECTS</a>  
 	<a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "View()">RESUME</a>
 	<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick= "SiteView('contact')">CONTACT</a>
  
@@ -241,7 +241,7 @@ Currently I am in my penultimate year studying Computer Science Engineering at M
 </div> 
 
 <!-- Image of location/map -->
-<img src="/Images/Ramaiah map.png" class="w3-image w3-greyscale-min" style="width:100%">
+<img src="/Images/Ramaiah map.png" class="w3-image w3-greyscale-min" style="display:none;width:100%" id='contact'>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
@@ -257,7 +257,7 @@ Currently I am in my penultimate year studying Computer Science Engineering at M
 
 <script>
 	function show(panel_name){
-            var names=['home','projects','contact'];
+            var names=['home','tour','contact'];
             for(var i=0;i<3;i++){
                 if(names[i]==panel_name){
                     document.getElementById(panel_name).style.display='block';
