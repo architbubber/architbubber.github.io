@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript">
+		function Calculator(n){
+			this.n = n;
+
+		}
+		Calculator.prototype.add = function(a){
+				this.n = a+this.n;
+				return this
+		}
+		Calculator.prototype.subtract = function(a){
+				this.n = this.n - a
+				return this
+			}
+		Calculator.prototype.getAnswer = function(){
+			return this.n
+		}
+		
+		console.log(new Calculator(2).add(2).add(2).subtract(3).getAnswer());
+	</script>
+</head>
+<body>
+
+</body>
+</html>
