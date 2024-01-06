@@ -31,26 +31,24 @@ body {font-family: "Lato", sans-serif;}
 </div>
 
 <!---- PDF View HTML  --->
-<div id="pdf" style="display:none">
+
 <style>
 html,body{
-    width: 100%;
-    max-width: 100vw;
-    height: 100%;
-    margin: 0;
-    
-}
-#pdf embed{
-    width:100vw;
-    height:100vh;
+    overflow-y: scroll;
 }
 #pdf{
-    height: 100vh;
-    width:100vw;
+  height: 100vh;
+  width: 100vw;
 }
 </style>
-<embed src="Resume.pdf"/>
+
+<div id="pdf" style="display:none;text-align:center;margin-top: 1vh;">
+  <!-- <h4>Pdf viewer testing</h4>
+  <iframe src="https://docs.google.com/viewer?url=https://architbubber.github.io/Resume.pdf&embedded=true" frameborder="0" height="100%" width="100%"></iframe> -->
+  <embed src="Resume.pdf" style="height: 100vh;
+  width: 100vw;"/>
 </div>
+
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
@@ -114,6 +112,16 @@ Currently I am in my penultimate year studying Computer Science Engineering at M
       </ul-->
 
       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+
+        <div class="w3-third w3-margin-bottom">
+          <img src="/Images/RITpic.png" alt="RIT DataCenter" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>RIT DataCenter</b></p>
+            <p class="w3-opacity">Since Jul 2020</p>
+            <p>I am leading the RIT-DataCenter development and maintenance team under the guidance of my Professors.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('comingsoon').style.display='block'">View Progress</button>
+          </div>
+        </div>
         
 	<div class="w3-third w3-margin-bottom">
           <img src="/Images/RITpic.png" alt="RIT DataCenter" style="width:100%" class="w3-hover-opacity">
@@ -289,12 +297,12 @@ Currently I am in my penultimate year studying Computer Science Engineering at M
 
 	}
 
-	function View() {
+function View() {
   var x = document.getElementById("pdf");
   if (x.style.display =="none"){
 	x.style.display ="block";
-	document.getElementById("html").style.overflow = "hidden";
-	document.getElementById("body").style.overflow = "hidden";
+	// document.getElementById("html").style.overflow = "hidden";
+	// document.getElementById("body").style.overflow = "hidden";
 	}
   else{
 	x.style.display ="none";
