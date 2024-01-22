@@ -70,7 +70,7 @@ background-size: cover;
         div{
             /* background-image: url('/Users/architbubber/Downloads/sample_test-removebg-preview.png'); */
             background-position: center;
-            background-image: url('Images/Cover.png');
+            background-image: url('Images-webp/Cover.webp');
             background-repeat: no-repeat;
             background-size: contain;
             backdrop-filter: blur(2px);
