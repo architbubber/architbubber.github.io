@@ -2,27 +2,50 @@
     font-family: Raleway;
     src: url('assets/fonts/static/Raleway-Black.ttf');
 }
+
+
+html{
+    scroll-snap-type:y mandatory;
+  }
+
+body{
+    /* font-family: 'Raleway'; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+ 
+nav{
+    position:sticky !important;
+    top:0;
+    z-index: 1;    
+    }
+
+
 @media (max-width:1000px) {
     .hideOnMobile{
         display: none;        
-    }
+        }
+        .main>section:nth-child(3){
+            overflow-y:scroll;
+        }
 }
+
 @media(min-width:999px) {
     .showOnMobile{
         display: none;
-    }
+        }
     .nav-item{
         margin-inline: 2em;
         font-size: larger;
         &:hover{
             cursor:grab;
+            }
         }
     }
-}
+
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; /* remove the gap so it doesn't close */
-}
+    }
 .navbar-brand,.nav-link{   
     color: grey;
     backdrop-filter: blur(1px);
@@ -31,20 +54,7 @@
             color:white;
         }
 }
-nav{
-    position:sticky !important;
-    top:0;
-    z-index: 1;    
-}
-
-html{
-    scroll-snap-type:y mandatory;
-  }
-body{
-font-family: 'Raleway';
-}
-  
-  
+   
 .main>section {
 
     height: 100vh;
@@ -52,24 +62,13 @@ font-family: 'Raleway';
     scroll-snap-align: start;
     scroll-snap-stop: always;
 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    &:nth-child(1){
-        background: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
-        /* https://media.istockphoto.com/id/1341408852/video/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke.jpg?s=640x640&k=20&c=v2DQUY8IVbli_6FH_9KAs6YWRXlDdYiBJHfp7JFh7NY= */
-        /* background: url('https://media.istockphoto.com/id/1341408852/video/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke.jpg?s=640x640&k=20&c=v2DQUY8IVbli_6FH_9KAs6YWRXlDdYiBJHfp7JFh7NY='); */
-        /* background: linear-gradient(90deg, rgba(40,112,133,1) 22%, rgba(61,70,133,0.9402135854341737) 52%, rgba(121,32,133,0.9514180672268907) 88%); */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
+    &:nth-child(1){        
         div{
-            /* background-image: url('/Users/architbubber/Downloads/sample_test-removebg-preview.png'); */
             background-position: center;
             background-image: url('Images-webp/Cover.webp');
             background-repeat: no-repeat;
@@ -79,33 +78,17 @@ font-family: 'Raleway';
             backdrop-filter: blur(1px);
             color: rgb(249, 249, 249) !important;
             text-shadow: 1px 0px white;
-            font-family:sans-serif;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
     }
     &:nth-child(2){
         display: none;
-        background-image: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
-        /* background-image: url('https://cdn.dribbble.com/users/5508583/screenshots/13916478/media/0d229ae6a041cfb8c8d15685dda6fd8d.gif'); */
-        /* background-image: url('https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif'); */
-        /* background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*AlyXzrKS2G53hqbZ5ArQfg.gif'); */
-        div{text-shadow: 1px 0px rgb(0, 0, 0);
-            /* font-family:sans-serif; */
+        div{
+            text-shadow: 1px 0px rgb(0, 0, 0);
             color: rgb(0, 0, 0) !important;
             font-size: larger;
-            text-align: center;}
-    }
-    &:nth-child(3){
-        background-image: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
-        /* background-image: url('https://static.wixstatic.com/media/996421_a5d2206122874f658dedb9265ed0522e~mv2.gif'); */
-    }
-    &:nth-child(4){
-        /* background-image: url('https://wallpaperxyz.com/wp-content/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-38.gif'); */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        background-image: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
+            text-align: center;
+        }
     }
 }
 
@@ -114,33 +97,23 @@ width: 100%;
 height: 100%;
 background-size: cover;
 background-attachment: fixed;
-/* border: 5px solid black; */
-/* filter:sepia(20); */
-
 }
 
 .backdrop-blur{
-backdrop-filter: blur(100px);
--webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
 }
 
 section>div.contact-block{
-height: auto;
-width: auto;
-border-radius: 10px;
-color: white;
-border: solid 1px white;
-box-shadow: 1px 1px 100px rgb(250, 225, 112);
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    color: white;
+    border: solid 1px white;
+    box-shadow: 1px 1px 100px rgb(250, 225, 112);
 }
 
 .my-works-card{
-    /* font-family: 'Courier New', Courier, monospace; */
-    /* max-height: 20vh !important; */
-    /* box-shadow: 1px 1px 100px rgb(250, 225, 112); */
-    /* min-width: 20vw; */
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
     aspect-ratio: 3/2;
-    /* height: auto; */
-    img{
-        background-blend-mode:luminosity;
-    }
 }
