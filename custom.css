@@ -24,9 +24,22 @@ nav{
     .hideOnMobile{
         display: none;        
         }
-        .main>section:nth-child(3){
-            overflow-y:scroll;
+        .main>section{
+            &:nth-child(1){        
+                div{
+                    background-position:top !important;
+                     /* background-repeat: no-repeat; */
+                    /* background-attachment: fixed !important; */
+                    background-size:90vh !important;
+                    width: 100%;
+                    height: 90vh !important;                    
+                }
+            }
+            &:nth-child(3){
+                overflow-y:scroll;
+            }
         }
+        
 }
 
 @media(min-width:999px) {
