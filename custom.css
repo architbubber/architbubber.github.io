@@ -23,48 +23,49 @@
     display: block;
     margin-top: 0; /* remove the gap so it doesn't close */
 }
-.navbar-brand,.nav-link{
-    color:rgb(180, 113, 243);
-    /* text-shadow: 1px 1px 10px rgb(157, 240, 119); */
-    /* font-family: 'Courier New', Courier, monospace; */
-    &:hover{
-        color:white;
-    }
+.navbar-brand,.nav-link{   
+    color: grey;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+        &:hover{
+            color:white;
+        }
 }
 nav{
-    position: sticky !important;
+    position:sticky !important;
     top:0;
-    z-index: 1;
+    z-index: 1;    
 }
 
 html{
     scroll-snap-type:y mandatory;
-    /* font-family: sans-serif !important; */
   }
 body{
-/* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
 font-family: 'Raleway';
 }
   
   
 .main>section {
 
-height: 100vh;
+    height: 100vh;
 
-scroll-snap-align: start;
-scroll-snap-stop: always;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &:nth-child(1){
-        /* background-image: url('https://cdn.dribbble.com/users/2595998/screenshots/5405923/bg_office_4_3.gif'); */
-        background: url('https://cdn.sanity.io/images/tlr8oxjg/production/5c3120359be5c4f225cd7b817811217041b759ab-1192x668.png?w=3840&q=80&fit=clip&auto=format');
+        background: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
+        /* https://media.istockphoto.com/id/1341408852/video/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke.jpg?s=640x640&k=20&c=v2DQUY8IVbli_6FH_9KAs6YWRXlDdYiBJHfp7JFh7NY= */
+        /* background: url('https://media.istockphoto.com/id/1341408852/video/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke.jpg?s=640x640&k=20&c=v2DQUY8IVbli_6FH_9KAs6YWRXlDdYiBJHfp7JFh7NY='); */
         /* background: linear-gradient(90deg, rgba(40,112,133,1) 22%, rgba(61,70,133,0.9402135854341737) 52%, rgba(121,32,133,0.9514180672268907) 88%); */
-        background-size: contain;
         background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         
         div{
@@ -73,14 +74,17 @@ background-size: cover;
             background-image: url('Images-webp/Cover.webp');
             background-repeat: no-repeat;
             background-size: contain;
-            backdrop-filter: blur(2px);
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(1px);
             color: rgb(249, 249, 249) !important;
             text-shadow: 1px 0px white;
             font-family:sans-serif;
         }
     }
     &:nth-child(2){
-        background-image: url('https://underconstructionpage.com/wp-content/uploads/2019/04/hacker.gif');
+        display: none;
+        background-image: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
         /* background-image: url('https://cdn.dribbble.com/users/5508583/screenshots/13916478/media/0d229ae6a041cfb8c8d15685dda6fd8d.gif'); */
         /* background-image: url('https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif'); */
         /* background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*AlyXzrKS2G53hqbZ5ArQfg.gif'); */
@@ -91,12 +95,17 @@ background-size: cover;
             text-align: center;}
     }
     &:nth-child(3){
-        /* background-image: url('https://miro.medium.com/v2/resize:fit:679/1*TJXwjRDZ4C3QoGVeifBrtw.gif'); */
-        background-image: url('https://d2w9rnfcy7mm78.cloudfront.net/16292467/original_ddaceecdd62614ddf9a488b75ef88075.gif?1651446728');
+        background-image: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
         /* background-image: url('https://static.wixstatic.com/media/996421_a5d2206122874f658dedb9265ed0522e~mv2.gif'); */
     }
     &:nth-child(4){
-        background-image: url('https://wallpaperxyz.com/wp-content/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-38.gif');
+        /* background-image: url('https://wallpaperxyz.com/wp-content/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-38.gif'); */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        background-image: url('https://img.freepik.com/premium-photo/3d-abstract-background_493604-1338.jpg');
     }
 }
 
@@ -105,28 +114,33 @@ width: 100%;
 height: 100%;
 background-size: cover;
 background-attachment: fixed;
-border: 5px solid black;
-/* filter: grayscale(100); */
-transition: filter 1s;
+/* border: 5px solid black; */
+/* filter:sepia(20); */
+
 }
 
 .backdrop-blur{
 backdrop-filter: blur(100px);
 -webkit-backdrop-filter: blur(100px);
 }
+
 section>div.contact-block{
 height: auto;
 width: auto;
 border-radius: 10px;
 color: white;
 border: solid 1px white;
-box-shadow: 1px 1px 100px white;
+box-shadow: 1px 1px 100px rgb(250, 225, 112);
 }
 
 .my-works-card{
     /* font-family: 'Courier New', Courier, monospace; */
-    max-height: 20vh !important;
-    box-shadow: 1px 1px 20px red;
-    min-width: 20vw;
-    aspect-ratio: 3/2;height: auto;
+    /* max-height: 20vh !important; */
+    /* box-shadow: 1px 1px 100px rgb(250, 225, 112); */
+    /* min-width: 20vw; */
+    aspect-ratio: 3/2;
+    /* height: auto; */
+    img{
+        background-blend-mode:luminosity;
+    }
 }
