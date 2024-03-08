@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $('.toast').toast({animation: true});
     function isInViewport(element) {
     var boundingBox = element.getBoundingClientRect();
     return (
@@ -36,8 +37,33 @@ $(document).ready(function () {
       }, 30);
       return;
     }
-})
+  })
+
+  if($('section#works').scrollTop()<10)
+    $('.toast').toast('show');
+  else
+    $('.toast').toast('hide');
+
+    $.fn.isInViewport = function() {
+
+      var elementTop = $(this).offset().top;
+    
+      var elementBottom = elementTop + $(this).outerHeight() / 2;
+    
+      var viewportTop = $(window).scrollTop();
+    
+      var viewportHalf = viewportTop + $(window).height() / 2;
+    
+      return elementBottom > viewportTop && elementTop < viewportHalf;
+    
+    };
+    console.log($('#works>div>div').position())
 });
+// if($('#works').scrollTop()<10)
+//     $('.toast').toast('show');
+//   else
+//     $('.toast').toast('hide');
+
 
 // $.fn.isInViewport = function() {
 //     var elementTop = $(this).offset().top;
@@ -66,3 +92,30 @@ $(document).ready(function () {
         
 //         }, 30);}
 // })});
+
+
+// $('.toast').toast({
+//   autohide: false
+// })
+// const button = document.getElementById('btn');
+const toasts = document.getElementById('toasts');
+
+// function showNotification(){
+//  const notif = document.createElement('div');
+//   notif.classList.add('toast');
+  
+//   notif.innerText = getMessage();
+//   toasts.appendChild(notif);
+  
+  // setTimeout(() => {
+  //   notif.remove()
+  // }, 3000)
+  
+// }
+function getMessage(){
+  return 'bokachoda';
+}
+
+// button.addEventListener('click', () => showNotification());
+// showNotification();
+                        
