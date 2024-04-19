@@ -9,7 +9,70 @@ $(document).ready(function () {
       boundingBox.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
+ 
+  var projectData = [
+    {
+      name:'Indian Institute of Sciences(IISc)',
+      imageSrc:'Images-webp/www.icwar.iisc.ac.in_.webp',
+      link:'https://icwar.github.io/'
+    },
+    {
+      name:'Dr. BramhaDutt Vishwakarma Portfolio',
+      imageSrc:'Images/BramhaDuttPortfolio.png',
+      link:'http://architbubber.github.io/BramhaDuttVishwakarma-Portfolio/'
+    },
+    {
+      name:'College DataCenter (MSRIT)',
+      imageSrc:'Images-webp/RITpic.webp',
+      link:'https://msritcse.vercel.app/'
+    },
+    {
+      name:'Camera Rental Website as Freelance',
+      imageSrc:'Images-webp/lcaktion.webp',
+      link:'https://lcaktion.herokuapp.com'
+    },
+    {
+      name:'Real Time browser based tracking website',
+      imageSrc:'Images-webp/TrackmeRide.webp',
+      link:'https://trackmeride.herokuapp.com'
+    },
+    {
+      name:'Arduino Flightcontroller integration with radio',
+      imageSrc:'https://static.wixstatic.com/media/0272ea_795922b5c4864e14bfbb26ed99bc318c~mv2.jpg',
+      link:''
+    },
+    {
+      name:'Portfolio',
+      imageSrc:'Images-webp/NewWebsite.webp',
+      link:'https://architbubber.github.io'
+    },
+    {
+      name:'Neopixel Led Code Generator',
+      imageSrc:'Images-webp/Neopixels.webp',
+      link:'https://architbubber.github.io/npcg.app'
+    }
+  ]
+                          
+  var preparedFlipCards = '';
 
+  for(var i = 0;i<projectData.length;i++){
+    preparedFlipCards+=`<div class="flip-card card my-works-card col-10 col-md-3 m-1">
+    <div class="flip-card-inner">
+      
+      <div class="flip-card-front card-body" style="height: 100%;background: url('`+projectData[i].imageSrc+`');background-size:contain;background-position: center;background-repeat: no-repeat;"></div>
+      
+      <div class="flip-card-back backdrop-blur ">
+      <a href ='`+projectData[i].link+`' class = "text-decoration-none" target="_blank">
+      <div class="card-header text-center">
+        `+projectData[i].name+` 
+        </div><br/>Click to View</a>
+      </div>
+    </div>
+  </div>
+  `
+  }
+
+  document.getElementById('works').innerHTML = preparedFlipCards;
   // Example usage
   var selectedElement = $('.typing-text');
 
@@ -113,9 +176,9 @@ const toasts = document.getElementById('toasts');
   
 // }
 function getMessage(){
-  return 'bokachoda';
+  return 'null';
 }
 
 // button.addEventListener('click', () => showNotification());
 // showNotification();
-                        
+

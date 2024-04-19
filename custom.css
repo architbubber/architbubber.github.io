@@ -91,8 +91,12 @@ nav{
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background: url('https://wallpapers.com/images/featured/laptop-murjp1nk4lp1idlt.jpg');
+    
     &:nth-child(1){
+        background:linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.4)
+          ),url('https://img.freepik.com/free-photo/top-view-workspace-with-laptop-cup-tea_23-2148430815.jpg');
         div{
             background-position: center;
             background-image: url('Images-webp/Cover.webp');
@@ -116,6 +120,16 @@ nav{
             font-size: larger;
             text-align: center;
         }
+    }
+    &:nth-child(3){
+        background: url('https://c4.wallpaperflare.com/wallpaper/533/463/577/abstract-texture-simple-simple-background-wallpaper-preview.jpg');
+    }
+    &:nth-child(4){
+        
+        background:linear-gradient(
+            rgba(0, 0, 0, 0.4), 
+            rgba(0, 0, 0, 0.4)
+          ), url('https://static.vecteezy.com/system/resources/thumbnails/024/690/675/small_2x/the-coffee-cup-is-closed-up-on-a-wooden-table-in-the-coffee-shop-near-the-window-illuminated-by-warm-afternoon-light-and-there-is-copy-space-available-for-content-and-banner-ai-generative-photo.jpg');
     }
 }
 
@@ -159,3 +173,51 @@ right: 0;
 /* align-items: flex-end; */
 color: white;
 }
+
+
+/* //////////// */
+.flip-card {
+    background-color: transparent;
+    /* width: 300px; */
+    /* height: 300px; */
+    /* perspective: 1000px; */
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    text-align: center;
+    align-content: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+    
+  .flip-card-back {
+    border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+    border-width: 2px;
+    
+    border-style: solid;
+    font-size: large;
+    a{
+        color: rgb(198, 203, 40) !important;
+        font-family:sans-serif;
+        font-weight: 600;
+    }
+    transform: rotateY(180deg);
+    cursor:pointer;
+  }
