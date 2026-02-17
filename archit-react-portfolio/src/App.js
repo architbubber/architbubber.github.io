@@ -1,6 +1,6 @@
 import React from "react";
-import Portfolio from "./Portfolio";
+import HomePage from "./views/HomePage";
 
 export default function App() {
-  return <Portfolio />;
+  return <HomePage />;
 }
